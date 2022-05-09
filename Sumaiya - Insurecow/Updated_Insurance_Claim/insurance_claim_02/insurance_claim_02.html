@@ -1,0 +1,304 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== BOOTSTRAP ====================-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--==================== FONT AWESOME ====================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./css/insurance_claim_02.css" />
+
+    <title>InsureCow</title>
+</head>
+
+<body class="container">
+
+    <!--==================== NAVBAR ====================-->
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light pb-0">
+                <div class="container-fluid">
+
+                    <!--Navbar Logo-->
+                    <a href="#" class="navbar-brand">
+                        <img src="./images/logo.png" alt="Logo">
+                    </a>
+
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="navbarCollapse" class="collapse navbar-collapse">
+
+                        <!--Home-->
+                        <ul class="nav navbar-nav ms-auto">
+                            <li class="nav-item navbar-brand">
+                                <a href="#" class="nav-link">Home</a>
+                            </li>
+
+                            <!--Profile-->
+                            <li class="nav-item navbar-brand">
+                                <a href="#" class="nav-link">Profile</a>
+                            </li>
+
+                            <!--Notification-->
+                            <li class="nav-item navbar-brand">
+                                <a href="#" class="nav-link">Notification</a>
+                            </li>
+
+                            <!--Sign out-->
+                            <li class="nav-item navbar-brand">
+                                <button type="submit" class="signout-button">SignOut</button>
+                            </li>
+                        </ul>
+
+                        <!--Language-->
+                        <ul class="navbar-nav d-flex flex-row">
+                            <li class="nav-item navbar-brand">
+                                <a href="#" class="nav-link">English</a>
+                            </li>
+
+                            <div class="vr vr-style"></div>
+
+                            <li class="nav-item navbar-brand ms-2">
+                                <a href="#" class="nav-link">বাংলা </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <hr class="hr-style">
+        </div>
+    </header>
+
+    <!--==================== INSURANCE CLAIM ====================-->
+
+    <section class="d-flex justify-content-center mb-5">
+        <div class="card card-style mt-5">
+
+            <form>
+                <!--Insurance claim table-->
+                <table>
+
+                    <!--Table links (Death, Thief, Sick)-->
+                    <tr>
+                        <td class="px-5">
+                            <div class="flex-style">
+                                <div class="link-style">
+                                    <a href="./insurance_claim_02.html" class="link-text">Death</a>
+                                </div>
+                                <div class="link-style">
+                                    <a href="#" class="link-text">Thief</a>
+                                </div>
+                                <div class="link-style">
+                                    <a href="#" class="link-text">Sick</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-5">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputPassword6" class="col-form-label">Cattle ID : </label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" id="inputCattleID" class="form-control input-style">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-5">
+                            Cattle Picture :
+
+                            <div class="row mt-4 mb-3">
+
+                                <!--Face of cow-->
+                                <div class="col-md-6 mb-5">
+                                    <p>Face of cow:</p>
+                                    <div class="file-upload">
+
+                                        <div class="image-upload-wrap">
+                                            <input class="file-upload-input" type='file' onchange="readURL(this);"
+                                                accept="image/*" />
+                                            <img class="img-card" src="./images/image.png" />
+                                        </div>
+
+                                        <div class="file-upload-content">
+                                            <img class="file-upload-image" src="" alt="face-of-cow"/>
+
+                                        </div>
+                                        <div class="image-title-wrap">
+                                            <button class="file-upload-btn mt-4" type="button"
+                                                onclick="$('.file-upload-input').trigger( 'click' )">Upload</button>
+                                            <button type="button" onclick="removeUpload()" class="remove-image">
+                                                <i class="fa-solid fa-circle-xmark"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cow with owner-->
+                                <div class="col-md-6 mb-5">
+                                    <p>Cow with owner:</p>
+                                    <div class="file2-upload">
+
+                                        <div class="image2-upload-wrap">
+                                            <input class="file2-upload-input" type='file' onchange="readURL2(this);"
+                                                accept="image/*" />
+                                            <img class="img-card" src="./images/image.png" />
+                                        </div>
+
+                                        <div class="file2-upload-content">
+                                            <img class="file2-upload-image" src="" alt="cow-with-owner" />
+
+                                        </div>
+                                        <div class="image2-title-wrap">
+                                            <button class="file2-upload-btn mt-4" type="button"
+                                                onclick="$('.file2-upload-input').trigger( 'click' )">Upload</button>
+                                            <button type="button" onclick="removeUpload2()" class="remove-image2">
+                                                <i class="fa-solid fa-circle-xmark"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--Video upload -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <p>Video:</p>
+                                    <div class="videofile-upload">
+
+                                        <div class="video-upload-wrap">
+
+                                            <input class="videofile-upload-input" id="file-input" type="file"
+                                                onchange="readVideoURL(this);" accept="video/*">
+
+                                            <img class="img-card" src="./images/image.png" />
+                                        </div>
+
+                                        <div class="videofile-upload-content">
+                                            <video class="videofile-upload-image" id="video" 
+                                                controls></video>
+
+                                        </div>
+                                        <div class="video-title-wrap">
+                                            <button class="videofile-upload-btn mt-4" type="button"
+                                                onclick="$('.videofile-upload-input').trigger( 'click' )">Upload</button>
+                                            <button type="button" onclick="removeVideoUpload()" class="remove-video">
+                                                <i class="fa-solid fa-circle-xmark"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-5 py-4">
+                            <button type="submit" class="check-button">Check</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+
+        </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <hr class="hr-style">
+    <section>
+        <footer>
+
+            <!-- Grid container -->
+            <div class="container p-4">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-4">
+                        <div>
+                            <img src="./images/logo.png">
+                        </div>
+                        <p>
+                            InsureCow is a cattle wellbeing monitoring
+                            and insurance platform that is playing a
+                            significant role in protecting and ensuring
+                            the asset value of large cattle for livestock
+                            farmers.
+                        </p>
+                    </div>
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-12 mt-lg-4 mb-4 mb-md-4 offset-lg-1 ">
+                        <div>
+                            <h5 class="mb-4">Language</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <a href="#" class="language-footer">English</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="language-footer">Bangla</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mt-lg-4 mb-4 mb-md-0 offset-lg-1">
+                        <div>
+                            <h5 class="mb-4">Contact Us</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    Phone : +880 1672 838306
+                                </li>
+                                <li class="mb-2">
+                                    E-mail : inquiry@insurecow.com
+                                </li>
+                                <li class="mb-2">
+                                    Suite 201, Navana DH Tower,
+                                    6 Panthapath Lane
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Insure Cow © 2021 All Right Reserved </p>
+
+            </div>
+        </footer>
+    </section>
+
+
+
+    <!--==================== JavaScript Bundle with Popper ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+    <!--==================== UPLOAD PHOTO ====================-->
+    <script src="./js/face_of_cow.js"></script>
+    <script src="./js/cow_with_owner.js"></script>
+    <script src="./js/video_upload.js"></script>
+
+</body>
+
+</html>

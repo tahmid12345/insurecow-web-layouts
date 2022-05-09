@@ -1,0 +1,273 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+
+/*=============== BASE ===============*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html body {
+    font-family: "Poppins", sans-serif;
+    color: #082E13;
+}
+
+.hr-style {
+    margin: 0;
+    background: #2F673F;
+}
+
+/*=============== NAVBAR ===============*/
+
+nav .navbar-nav li a {
+    font-size: 18px;
+    color: #082E13 !important;
+}
+
+nav .navbar-nav li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #1D5C2E;
+
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.vr-style {
+    color: #2F673F;
+    margin-top: 14px;
+    height: 30px;
+}
+
+.signout-button {
+    width: 140px;
+    background: #23BB86;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 0px;
+}
+
+/*=============== INSURANCE CLAIM ===============*/
+
+.card-style {
+    width: 46rem;
+    border-radius: 4px;
+    border: none;
+    box-shadow: rgba(79, 172, 35, 0.4) 0px 4px 18px;
+}
+
+/* Table links (Death, Thief, Sick) */
+
+.flex-style {
+    display: flex;
+    background-color: #23BB86;
+    width: 360px;
+    border-radius: 5px;
+}
+
+.link-style {
+    width: 120px;
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.link-text {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-style:hover {
+    background-color: #4ECB5A;
+}
+
+.link-text:hover {
+    color: #082E13;
+}
+
+/* Form input style */
+
+.input-style {
+    border-radius: 8px;
+}
+
+/* Table body style */
+
+table {
+    width: 100%;
+}
+
+td {
+
+    padding: 20px;
+    border: none;
+}
+
+table tbody tr:nth-child(2n+1) {
+    background-color: #F9F6F6;
+}
+
+
+/*Add Image and Video*/
+
+.file-upload,
+.file2-upload,
+.videofile-upload {
+    width: 240px;
+}
+
+.file-upload-btn,
+.file2-upload-btn,
+.videofile-upload-btn  {
+    width: 120px;
+    height: 30px;
+    background: #23BB86;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    margin-right: 80px;
+}
+
+.file-upload-btn:hover,
+.file2-upload-btn:hover,
+.videofile-upload-btn:hover  {
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active,
+.file2-upload-btn:active,
+.videofile-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.file-upload-content,
+.file2-upload-content,
+.videofile-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input,
+.file2-upload-input,
+.videofile-upload-input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-wrap,
+.image2-upload-wrap,
+.video-upload-wrap {
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.img-card,
+.file-upload-image,
+.file2-upload-image,
+.videofile-upload-image {
+    width: 240px;
+    height: 180px;
+    border-radius: 12px;
+    border: 1px solid #2F673F;
+}
+
+.remove-image,
+.remove-image2,
+.remove-video {
+    background: none;
+    color: #cd4535;
+    border: none;
+    transition: all .2s ease;
+}
+
+.remove-image:hover,
+.remove-image2:hover,
+.remove-video:hover{
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active,
+.remove-image2:active,
+.remove-video:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+/* Check button */
+.check-button{
+    width: 120px;
+    height: 30px;
+    background: #23BB86;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    margin-right: 80px;
+}
+
+/*=============== FOOTER ===============*/
+
+.language-footer {
+    text-decoration: none;
+    color: #082E13;
+}
+
+.language-footer:hover {
+    color: #082E13;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #1D5C2E;
+
+}
+
+/*=============== Media screen for mobile devices ===============*/
+
+@media only screen and (max-width: 600px) {
+
+    /* Navbar */
+    .signout-button {
+        width: 120px;
+        padding: 6px 0px;
+    }
+
+    /* Insurance claim */
+    .flex-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-style {
+        display: flex;
+        background-color: #23BB86;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+}

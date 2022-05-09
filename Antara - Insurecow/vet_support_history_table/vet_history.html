@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./vet_history.css" />
+
+    <!-- Table Css -->
+    <!-- <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" rel="stylesheet">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <div>
+            <table id="insurecow-datatable" class="display" style="width:100%">
+                <thead class="thead-style">
+                    <tr>
+                        <th>Disease </th>
+                        <th>Details</th>
+                        <th>Issue Date </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th>Fever </th>
+                        <th>Fever </th>
+                        <th>12 Dec 2021 </th>
+                    </tr>
+                    <tr>
+                        <th>Foot Rot </th>
+                        <th>The cow had a leg wound </th>
+                        <th>08 Dec 2021 </th>
+                    </tr>
+                    <tr>
+                        <th>Grass Tetany </th>
+                        <th>Cow blood falls magnesium critical level </th>
+                        <th>15 Nov 2021 </th>
+                    </tr>
+                    <tr>
+                        <th>White Muscle </th>
+                        <th>The cow was affected by skeletal muscle </th>
+                        <th>10 Oct 2021 </th>
+                    </tr>
+                    <tr>
+                        <th>Dysentery </th>
+                        <th>Affected by bacterial infections </th>
+                        <th>15 Sep 2021 </th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+
+    <!-- Table JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> -->
+    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#insurecow-datatable').DataTable();
+        });
+
+        $('#insurecow-datatable').DataTable({
+            responsive: true
+        });
+    </script>
+</body>
+
+</html>
